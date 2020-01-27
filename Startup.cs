@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebScraping.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace webscraping
+namespace WebScraping
 {
     public class Startup
     {
@@ -19,6 +21,9 @@ namespace webscraping
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<WebScrapingContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("WebScrapingContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,7 +50,7 @@ namespace webscraping
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=TaxaSelic}/{action=Index}/{id?}");
             });
         }
     }

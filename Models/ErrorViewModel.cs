@@ -1,6 +1,6 @@
 using System;
 
-namespace webscraping.Models
+namespace WebScraping.Models
 {
     public class ErrorViewModel
     {

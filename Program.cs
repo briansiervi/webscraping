@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace webscraping
+namespace WebScraping
 {
     public class Program
     {

@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using webscraping.Models;
+using WebScraping.Models;
 
-namespace webscraping.Controllers
+namespace WebScraping.Controllers
 {
     public class HomeController : Controller
     {
